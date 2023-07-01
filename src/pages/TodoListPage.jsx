@@ -10,8 +10,8 @@ const items = [
 
 const TodoListPage = () => {
   return (
-    <div>
-      Список дел
+    <div className="w-full flex flex-col justify-center gap-4">
+      <span className='text-2xl col-span-full'>Список дел</span>
       <Form />
       <Table items={items}/>
     </div>
