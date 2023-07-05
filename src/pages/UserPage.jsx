@@ -40,12 +40,8 @@ const UserPage = () => {
           className='bg-slate-300 px-2 py-1 rounded-md'>Сохранить</button>
       </form>
       <div className='col-span-full md:col-start-2 md:col-end-3'>
-        {name && age && (       
-          <>    
-            <span className='w-full inline-block'>Имя: </span>
-            <span className='w-full inline-block'>Возраст: </span>
-          </>
-        )}
+        <span className='w-full inline-block'>Имя: </span>
+        <span className='w-full inline-block'>Возраст: </span>
       </div>
     </div>
   )

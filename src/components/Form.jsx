@@ -12,16 +12,18 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="w-full flex justify-center gap-3">
-        <input 
-          type="text" 
-          className='rounded-sm px-1' 
-          value={newTodo} 
-          onChange={(e) => setNewTodo(e.target.value)}/>
-        <button type="submit" className="w-8 bg-slate-300 px-2 py-1 rounded-sm">+</button>
+      <form onSubmit={handleSubmit} className="max-w-full lg:w-1/2 flex justify-center gap-2">
+        <div>
+          <input 
+            type="text" 
+            className='rounded-sm px-1' 
+            value={newTodo} 
+            onChange={(e) => setNewTodo(e.target.value)}/>
+        </div>
+        <div>
+          <button type="submit" className="bg-slate-300 px-2 py-1 rounded-sm">+</button>
+      </ div>
       </form>
-    </div>
   )
 }
 
