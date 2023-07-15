@@ -8,8 +8,8 @@ const activeLinkClass = ({isActive}) => {
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-center align-center h-16 col-span-4 bg-neutral-50 border-b border-b-slate-300">
-      <ul className="flex items-center gap-6 list-none">
+    <nav className="sticky top-0 z-10 flex justify-center align-center h-16 col-span-4 bg-neutral-50 border-b bg-opacity-75 backdrop-blur backdrop-filter border-b-slate-300 [&>*]:flex  [&>*]:items-center [&>*]:gap-6 [&>*]:list-none">
+      <ul>
         <li>
           <NavLink to="/" className={activeLinkClass}>Home</NavLink>
         </li>
@@ -21,6 +21,9 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to="/todos" className={activeLinkClass}>Todo List</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login" className={activeLinkClass}>Login</NavLink>
         </li>
       </ul>
     </nav>
