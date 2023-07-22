@@ -12,11 +12,11 @@ const Form = () => {
   }
 
   return (
-      <form onSubmit={handleSubmit} className="max-w-full lg:w-1/2 flex justify-center gap-2">
+      <form onSubmit={handleSubmit} className="max-w-full lg:w-1/2 flex justify-center self-center gap-2">
         <div>
           <input 
             type="text" 
-            className='rounded-sm px-1' 
+            className='rounded-sm px-2 py-1' 
             value={newTodo} 
             onChange={(e) => setNewTodo(e.target.value)}/>
         </div>
