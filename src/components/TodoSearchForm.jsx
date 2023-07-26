@@ -1,6 +1,6 @@
-import React from 'react'
 
-const SearchForm = () => {
+
+const TodoSearchForm = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -15,4 +15,4 @@ const SearchForm = () => {
   )
 }
 
-export default SearchForm
+export default TodoSearchForm

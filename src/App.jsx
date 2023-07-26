@@ -2,7 +2,6 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import CounterPage from './pages/CounterPage'
-import UserPage from './pages/UserPage'
 
 
 function App() {

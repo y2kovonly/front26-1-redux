@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-const Form = () => {
+
+const TodoForm = () => {
   const [newTodo, setNewTodo] = useState('');
 
   const handleSubmit = (e) => {
@@ -27,4 +28,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default TodoForm

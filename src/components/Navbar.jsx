@@ -1,9 +1,9 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
-const activeLinkClass = ({isActive}) => {
+const activeLinkClass = ({ isActive }) => {
   return isActive ? 'rounded-sm bg-slate-300 py-1 px-2 text-gray-700' : 'py-1 px-2 text-slate-700'
-} 
+}
 
 
 const Navbar = () => {

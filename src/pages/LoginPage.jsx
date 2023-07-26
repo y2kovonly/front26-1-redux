@@ -14,24 +14,20 @@ const LoginPage = () => {
       <span className='text-2xl col-span-full'>Страница входа</span>
       <form 
         onSubmit={handleSubmit} 
-        className="w-[min(100%,20rem)] col-span-full md:col-span-1) md:col-start-1 md:col-end-2 flex flex-col justify-center gap-3">
+        className="w-[min(100%,20rem)] col-span-full md:col-span-1) md:col-start-1 md:col-end-2 flex flex-col justify-center gap-3 [&>*]:px-2 [&>*]:py-1 [&>input]:rounded-sm [&>button]:rounded-md [&>button]:bg-slate-300">
         <input 
           type="text" 
-          className='rounded-sm px-1'
           placeholder='Имя пользователя'
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input 
           type="password" 
-          className='rounded-sm px-1'
           placeholder='Пароль'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button 
-          type="submit" 
-          className='bg-slate-300 px-2 py-1 rounded-md'>Войти</button>
+        <button type="submit">Войти</button>
       </form>
     </div>
   )

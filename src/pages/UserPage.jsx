@@ -17,40 +17,35 @@ const UserPage = () => {
 
 
   return (
-    <div className='grid grid-cols-2 gap-6'>
+    <div className='grid grid-cols-5 gap-5 lg:gap-[20px] max-w-[960px] [&>*]:justify-self-center'>
       <span className='text-2xl col-span-full'>Страница пользователя</span>
       <form 
         onSubmit={handleSubmit} 
-        className="w-full col-span-full md:col-start-1 md:col-end-2 flex flex-col justify-center gap-3">
+        className="w-full col-span-full md:max-w-xs xl:max-w-md lg:col-start-1 lg:col-end-3 flex flex-col justify-center gap-3 [&>*]:px-2 [&>*]:py-1 [&>input]:rounded-sm [&>button]:rounded-md [&>button]:bg-slate-300">
         <input 
           type="text" 
-          className='rounded-sm px-1'
           placeholder='Имя пользователя'
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
         <input 
           type="email" 
-          className='rounded-sm px-1'
-          placeholder='Email пользователя'
+          placeholder='Email'
           value={userEmail}
           onChange={(e) => setUserEmail(e.target.value)}
         />
         <input 
           type="text" 
-          className='rounded-sm px-1' 
-          placeholder='Телефон пользователя'
+          placeholder='Телефон'
           value={userPhone}
           onChange={(e) => setUserPhone(e.target.value)}
         />
-        <button 
-          type="submit" 
-          className='bg-slate-300 px-2 py-1 rounded-md'>Сохранить</button>
+        <button type="submit">Сохранить</button>
       </form>
-      <div className='col-span-full md:col-start-2 md:col-end-3'>
-        <span className='w-full inline-block'>Имя: </span>
-        <span className='w-full inline-block'>Email: </span>
-        <span className='w-full inline-block'>Телефон: </span>
+      <div className='w-full col-span-full md:max-lg:max-w-xs lg:col-start-3 lg:col-end-6 flex flex-col gap-3 items-stretch text-md text-left [&>span]:truncate [&>span]:border-2 [&>span]:border-rose-400 [&>span]:border-dashed [&>*]:p-1'>
+        <span>Имя: {userName}</span>
+        <span>Email: {userEmail}</span>
+        <span>Телефон: {userPhone}</span>
       </div>
     </div>
   )
