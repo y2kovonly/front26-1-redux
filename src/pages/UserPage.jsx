@@ -2,16 +2,17 @@ import { useState } from 'react';
 
 
 const UserPage = () => {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState(0);
+  const [userName, setUserName] = useState('')
+  const [userEmail, setUserEmail] = useState('')
+  const [userPhone, setUserPhone] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.trim() === '' || age < 1) return;
 
     //
-    setName('');
-    setAge(0);
+    setUserName('')
+    setUserEmail('')
+    setUserPhone('')
   }
 
 
@@ -25,15 +26,22 @@ const UserPage = () => {
           type="text" 
           className='rounded-sm px-1'
           placeholder='Имя пользователя'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         />
         <input 
-          type="number" 
+          type="email" 
           className='rounded-sm px-1'
-          placeholder='Возраст'
-          value={age}
-          onChange={(e) => setAge(Number(e.target.value))}
+          placeholder='Email пользователя'
+          value={userEmail}
+          onChange={(e) => setUserEmail(e.target.value)}
+        />
+        <input 
+          type="text" 
+          className='rounded-sm px-1' 
+          placeholder='Телефон пользователя'
+          value={userPhone}
+          onChange={(e) => setUserPhone(e.target.value)}
         />
         <button 
           type="submit" 
@@ -41,7 +49,8 @@ const UserPage = () => {
       </form>
       <div className='col-span-full md:col-start-2 md:col-end-3'>
         <span className='w-full inline-block'>Имя: </span>
-        <span className='w-full inline-block'>Возраст: </span>
+        <span className='w-full inline-block'>Email: </span>
+        <span className='w-full inline-block'>Телефон: </span>
       </div>
     </div>
   )

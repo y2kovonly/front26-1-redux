@@ -2,6 +2,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import CounterPage from './pages/CounterPage'
+import UserPage from './pages/UserPage'
 
 
 function App() {
@@ -10,9 +11,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<h2>Home</h2>} />
+          <Route index element={<span className='text-2xl'>Home Page</span>} />
           <Route path="counter" element={<CounterPage />} />
-          <Route path="*" element={<h2>Not found</h2>} />
+          <Route path="*" element={<span className='text-2xl'>Not found</span>} />
         </Route>
       </Routes>
     </>
